@@ -7,6 +7,5 @@ class uno {
   ellipse ((width/2),(height/2) ,150,150);
   textSize(30);
   text("Te toco: 1",width -160 ,40);
-  P= P+1;
   }
 }

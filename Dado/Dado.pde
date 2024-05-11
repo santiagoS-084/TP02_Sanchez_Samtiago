@@ -9,6 +9,10 @@ seis cara_6;
 
 void setup(){
  size (700,500);
+ fill(70);
+ println("presiona R para tirar tu dado");
+ println("presiona Y + R para volver a tirar");
+ println("revisa no tener activadas las mayusculas");
  anchoD =300;
  altoD = anchoD;
  background(#0FD5FA);
@@ -21,10 +25,6 @@ void setup(){
  R=0;
  Q=0;
  ñ=0;
- int []Adado={0,0,0,0};
- for(int i=0; i< Adado.length; i++){
-   Adado[i]=0;
- }
 }
 void keyPressed (){
   if(key=='r'){   
@@ -35,16 +35,21 @@ void keyPressed (){
   }
 }
 void draw(){
+  textSize(20);
+  text("_Presiona R para tirar tu dado",50,55);
+  text("_Presiona Y + R para volver a tirar",50,75);
+  text("_Revisa no tener activadas las mayusculas",50,95);
   //println(ñ);
    if(key == 'y'){
     R= int (random(6));
-    println(R);
+    println("rotando... "+R);
     background(#0FD5FA);
     textSize(30);
     text("TIRANDO DADOS...",(width/3), height/2);
     }
   if(key == 'r'){
      background(#0FD5FA);
+     textSize(30);
      println("Lista de dados: " + Adado[0] + ", " + Adado[1] + ", " + Adado[2] + ", " + Adado[3]);
      text("puntuacion: " + (Adado[0] + Adado[1] +Adado [2]+Adado[3]),10, height - 30);
     if(R ==0){
